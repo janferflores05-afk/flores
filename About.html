@@ -1,14 +1,17 @@
 <!DOCTYPE html>
 <html>
 <head>
+
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <title>Janfer Flores - About</title>
 
     <link rel="stylesheet"
-    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 
 <style>
+
     * {
         margin: 0;
         padding: 0;
@@ -25,7 +28,7 @@
         background-attachment: fixed;
     }
 
-    
+    /* Navigation */
 
     .navigation {
         width: 100%;
@@ -64,6 +67,8 @@
         color: darkred;
     }
 
+    /* Container */
+
     .container {
         width: 90%;
         max-width: 850px;
@@ -71,27 +76,56 @@
         text-align: center;
     }
 
+    /* About Card */
+
     .card {
-        background: rgba(255,255,255,0.9);
-        padding: 40px 30px;
-        border-radius: 8px;
+        background: rgba(255,255,255,0.93);
+        padding: 0 30px 40px 30px;
+        border-radius: 10px;
         box-shadow: 0 10px 30px rgba(0,0,0,0.18);
+        overflow: hidden;
     }
+
+    /* Picture at the top */
+
+    .about-image {
+        width: 100%;
+        height: 300px;
+        object-fit: cover;
+        display: block;
+        margin-bottom: 30px;
+    }
+
+    /* Title */
 
     h1 {
         color: #333;
         margin-bottom: 25px;
     }
 
-    h2 {
+    h1 i {
         color: #163b7a;
-        margin: 20px 0 10px;
+        margin-right: 8px;
     }
 
-    p {
-        color: #666;
-        line-height: 1.8;
+    /* Headings */
+
+    h2 {
+        color: #163b7a;
+        margin: 25px 0 10px;
     }
+
+    /* Paragraph */
+
+    p {
+        color: #555;
+        line-height: 1.8;
+        text-align: justify;
+        margin-bottom: 15px;
+    }
+
+    /* Mobile */
+
     @media(max-width:600px) {
 
         .navigation {
@@ -110,15 +144,22 @@
         }
 
         .card {
-            padding: 30px 20px;
+            padding: 0 20px 30px 20px;
+        }
+
+        .about-image {
+            height: 220px;
         }
 
     }
+
 </style>
 
 </head>
 
 <body>
+
+
 
 <div class="navigation">
 
@@ -154,14 +195,24 @@
 </div>
 
 
+
+
 <div class="container">
 
     <div class="card">
+
+       
+
+        <img src="pet.jpg"
+             alt="Cars and Motorcycles"
+             class="about-image">
+
 
         <h1>
             <i class="fa-solid fa-car"></i>
             About Our Products
         </h1>
+
 
         <h2>
             Our Vehicles
@@ -174,6 +225,7 @@
             features, and price ranges.
         </p>
 
+
         <h2>
             Regular Cars
         </h2>
@@ -184,6 +236,7 @@
             are suitable for everyday transportation, family trips,
             and comfortable city driving.
         </p>
+
 
         <h2>
             Sports Cars
@@ -197,6 +250,7 @@
             styling and powerful performance.
         </p>
 
+
         <h2>
             Scooters
         </h2>
@@ -208,6 +262,7 @@
             transportation.
         </p>
 
+
         <h2>
             Big Bikes
         </h2>
@@ -218,6 +273,7 @@
             Honda CBR1000RR, Suzuki Hayabusa, BMW S1000RR,
             and Ducati Panigale V4.
         </p>
+
 
         <h2>
             Our Purpose
@@ -232,8 +288,6 @@
         </p>
 
     </div>
-
-</div>
 
 </div>
 
