@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Janfer Flores - About</title>
+
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            min-height: 100vh;
+            background: url("3.jpg");
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            padding-top: 90px;
+        }
+
+        /* TOP NAVIGATION */
+        .navigation {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 12px;
+            padding: 20px;
+            background: rgba(255, 255, 255, 0.95);
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+            z-index: 1000;
+        }
+
+        .nav-btn {
+            text-decoration: none;
+            background: white;
+            color: #666;
+            padding: 12px 25px;
+            border-radius: 4px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.12);
+            transition: 0.3s;
+        }
+
+        .nav-btn:hover,
+        .active {
+            color: #163b7a;
+            transform: translateY(-3px);
+        }
+
+        .nav-btn i {
+            margin-right: 7px;
+        }
+
+        /* LOG OUT BUTTON */
+        .nav-btn.logout {
+            color: red;
+        }
+
+        .nav-btn.logout:hover {
+            color: darkred;
+        }
+
+        /* MAIN CONTENT */
+        .container {
+            width: 90%;
+            max-width: 850px;
+            margin: 30px auto;
+            text-align: center;
+        }
+
+        .card {
+            background: rgba(255, 255, 255, 0.9);
+            padding: 40px 30px;
+            border-radius: 8px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.18);
+            margin-bottom: 30px;
+        }
+
+        h1 {
+            color: #333;
+            margin-bottom: 25px;
+        }
+
+        h2 {
+            color: #163b7a;
+            margin: 20px 0 10px;
+        }
+
+        p {
+            color: #666;
+            line-height: 1.8;
+        }
+
+        /* MOBILE */
+        @media(max-width: 600px) {
+            body {
+                padding-top: 170px;
+            }
+
+            .navigation {
+                flex-direction: column;
+                gap: 8px;
+                padding: 12px;
+            }
+
+            .nav-btn {
+                width: 200px;
+                text-align: center;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+<div class="navigation">
+
+    <a href="Home.html" class="nav-btn">
+        <i class="fa-solid fa-house"></i> Home
+    </a>
+
+    <a href="About.html" class="nav-btn active">
+        <i class="fa-solid fa-circle-info"></i> About
+    </a>
+
+    <a href="Product.html" class="nav-btn">
+        <i class="fa-solid fa-briefcase"></i> Product
+    </a>
+
+    <a href="Contact.html" class="nav-btn">
+        <i class="fa-solid fa-envelope"></i> Contact
+    </a>
+
+    <a href="log in form.html"
+       class="nav-btn logout"
+       onclick="return confirm('Are you sure you want to log out?');">
+
+        <i class="fa-solid fa-right-from-bracket"></i>
+        Log Out
+    </a>
+
+</div>
+
+<div class="container">
+
+    <div class="card">
+        
+        </h1>
+
+        <h2>About My Website</h2>
+
+    <p>
+        This website is created to showcase and sell different
+        vehicles. It provides customers with an easy way to view
+        vehicle information, prices, and available products.
+    </p>
+
+    <h2>Purpose of My Website</h2>
+
+    <p>
+        The purpose of this website is to help customers easily
+        find and explore vehicles they may be interested in.
+    </p>
+
+    </div>
+
+</div>
+
+</body>
+</html>
