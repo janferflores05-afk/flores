@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Janfer Flores - Contact</title>
+
+   <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+<style>
+
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: Arial, sans-serif;
+    }
+
+    body {
+        min-height: 100vh;
+        background: url("log in.jpg");
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        padding-top: 90px;
+    }
+    .navigation {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+        gap: 12px;
+
+        padding: 20px;
+
+        background: rgba(255, 255, 255, 0.95);
+
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+
+        z-index: 1000;
+    }
+
+    .nav-btn {
+        text-decoration: none;
+        background: white;
+        color: #666;
+
+        padding: 12px 25px;
+
+        border-radius: 4px;
+
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.12);
+
+        transition: 0.3s;
+
+        font-weight: bold;
+    }
+
+    .nav-btn:hover,
+    .active {
+        color: #163b7a;
+        transform: translateY(-3px);
+    }
+
+    .nav-btn i {
+        margin-right: 7px;
+    }
+
+    /* LOG OUT BUTTON */
+
+    .nav-btn.logout {
+        color: red;
+    }
+
+    .nav-btn.logout:hover {
+        color: darkred;
+    }
+   .container {
+        width: 90%;
+        max-width: 850px;
+
+        margin: 30px auto;
+
+        text-align: center;
+    }
+
+    .card {
+        background: rgba(255, 255, 255, 0.9);
+
+        padding: 40px 30px;
+
+        border-radius: 8px;
+
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.18);
+
+        margin-bottom: 30px;
+    }
+    h1 {
+        color: #333;
+
+        margin-bottom: 25px;
+    }
+
+    .contact-item {
+        margin: 20px 0;
+
+        color: #666;
+
+        font-size: 16px;
+    }
+
+    .contact-item i {
+        color: #163b7a;
+
+        font-size: 22px;
+
+        margin-right: 10px;
+    }
+    .contact-form {
+        margin-top: 25px;
+    }
+
+    input,
+    textarea {
+        width: 100%;
+
+        padding: 12px;
+
+        margin-bottom: 15px;
+
+        border: 1px solid #ddd;
+
+        border-radius: 4px;
+
+        outline: none;
+
+        font-size: 14px;
+    }
+
+    input:focus,
+    textarea:focus {
+        border-color: #163b7a;
+    }
+
+    textarea {
+        height: 100px;
+
+        resize: none;
+    }
+
+    button {
+        padding: 12px 30px;
+
+        background: #163b7a;
+
+        color: white;
+
+        border: none;
+
+        border-radius: 4px;
+
+        cursor: pointer;
+
+        font-weight: bold;
+
+        transition: 0.3s;
+    }
+
+    button:hover {
+        background: #0d2855;
+
+        transform: translateY(-2px);
+    }
+
+    @media(max-width: 600px) {
+
+        body {
+            padding-top: 170px;
+        }
+
+        .navigation {
+            flex-direction: column;
+
+            gap: 8px;
+
+            padding: 12px;
+        }
+
+        .nav-btn {
+            width: 200px;
+
+            text-align: center;
+        }
+
+        .container {
+            width: 92%;
+
+            margin: 20px auto;
+        }
+
+        .card {
+            padding: 30px 20px;
+        }
+
+    }
+
+</style>
+
+</head>
+
+<body>
+
+<div class="container">
+
+    <div class="card">
+
+        <h1><i class="fa-solid fa-envelope"></i> Contact Me</h1>
+
+        <div class="contact-item">
+            <i class="fa-solid fa-user"></i>
+            Janfer Flores
+        </div>
+
+        <div class="contact-item">
+            <i class="fa-solid fa-envelope"></i>
+            janferflores@email.com
+        </div>
+
+        <div class="contact-item">
+            <i class="fa-solid fa-location-dot"></i>
+            Philippines-Kahayagan East Aurora Z,D,
+        </div>
+
+        <div class="contact-form">
+
+            <input type="text" placeholder="Your Name">
+
+            <input type="email" placeholder="Your Email">
+
+            <textarea placeholder="Your Message"></textarea>
+
+            <button onclick="sendMessage()">
+                <i class="fa-solid fa-paper-plane"></i>
+                Send Message
+            </button>
+
+        </div>
+
+    </div>
+
+    <div class="navigation">
+
+        <a href="Home.html" class="nav-btn">
+            <i class="fa-solid fa-house"></i> Home
+        </a>
+
+        <a href="About.html" class="nav-btn">
+            <i class="fa-solid fa-circle-info"></i> About
+        </a>
+
+        <a href="Product.html" class="nav-btn">
+            <i class="fa-solid fa-briefcase"></i> Product
+        </a>
+
+        <a href="Contact.html" class="nav-btn active">
+            <i class="fa-solid fa-envelope"></i> Contact
+        </a>
+		<a href="log in form.html"
+           class="nav-btn logout"
+     
+           <i class="fa-solid fa-right-from-bracket"></i>
+            Log Out
+			</a>
+
+    </div>
+
+</div>
+
+<script>
+function sendMessage() {
+    alert("Thank you for contacting me!");
+}
+</script>
+
+</body>
+</html>

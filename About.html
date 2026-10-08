@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Janfer Flores - About</title>
+
+    <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: Arial, sans-serif;
+    }
+
+    body {
+        min-height: 100vh;
+        background: url("3.jpg");
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+    }
+
+    
+
+    .navigation {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+        gap: 12px;
+        padding: 18px;
+        background: gray;
+    }
+
+    .nav-btn {
+        text-decoration: none;
+        color: white;
+        padding: 12px 25px;
+        font-weight: bold;
+        transition: 0.3s;
+    }
+
+    .nav-btn:hover,
+    .active {
+        color: #333;
+        transform: translateY(-3px);
+    }
+
+    .nav-btn i {
+        margin-right: 7px;
+    }
+
+    .logout {
+        color: red;
+    }
+
+    .logout:hover {
+        color: darkred;
+    }
+
+    .container {
+        width: 90%;
+        max-width: 850px;
+        margin: 50px auto;
+        text-align: center;
+    }
+
+    .card {
+        background: rgba(255,255,255,0.9);
+        padding: 40px 30px;
+        border-radius: 8px;
+        box-shadow: 0 10px 30px rgba(0,0,0,0.18);
+    }
+
+    h1 {
+        color: #333;
+        margin-bottom: 25px;
+    }
+
+    h2 {
+        color: #163b7a;
+        margin: 20px 0 10px;
+    }
+
+    p {
+        color: #666;
+        line-height: 1.8;
+    }
+    @media(max-width:600px) {
+
+        .navigation {
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .nav-btn {
+            width: 200px;
+            text-align: center;
+        }
+
+        .container {
+            width: 92%;
+            margin: 30px auto;
+        }
+
+        .card {
+            padding: 30px 20px;
+        }
+
+    }
+</style>
+
+</head>
+
+<body>
+
+<div class="navigation">
+
+    <a href="Home.html" class="nav-btn">
+        <i class="fa-solid fa-house"></i>
+        Home
+    </a>
+
+    <a href="About.html" class="nav-btn active">
+        <i class="fa-solid fa-circle-info"></i>
+        About
+    </a>
+
+    <a href="Product.html" class="nav-btn">
+        <i class="fa-solid fa-car"></i>
+        Product
+    </a>
+
+    <a href="Contact.html" class="nav-btn">
+        <i class="fa-solid fa-envelope"></i>
+        Contact
+    </a>
+
+    <a href="log in form.html"
+       class="nav-btn logout"
+       onclick="return confirm('Are you sure you want to log out?');">
+
+        <i class="fa-solid fa-right-from-bracket"></i>
+        Log Out
+
+    </a>
+
+</div>
+
+
+<div class="container">
+
+    <div class="card">
+
+        <h1>
+            <i class="fa-solid fa-car"></i>
+            About Our Products
+        </h1>
+
+        <h2>
+            Our Vehicles
+        </h2>
+
+        <p>
+            Our website offers a variety of vehicles for customers
+            to choose from. We provide regular cars, sports cars,
+            scooters, and big bikes with different styles,
+            features, and price ranges.
+        </p>
+
+        <h2>
+            Regular Cars
+        </h2>
+
+        <p>
+            Our regular car selection includes the Toyota Vios,
+            Honda Civic, and Mitsubishi Mirage. These vehicles
+            are suitable for everyday transportation, family trips,
+            and comfortable city driving.
+        </p>
+
+        <h2>
+            Sports Cars
+        </h2>
+
+        <p>
+            We also offer sports cars such as the Toyota GR Supra,
+            Nissan GT-R, Ford Mustang, Chevrolet Corvette,
+            Porsche 911, and Chevrolet Camaro. These vehicles
+            are designed for customers who appreciate sporty
+            styling and powerful performance.
+        </p>
+
+        <h2>
+            Scooters
+        </h2>
+
+        <p>
+            Our scooter selection includes the Honda Click 125i,
+            Yamaha NMAX, and Yamaha Mio. These motorcycles are
+            practical and suitable for everyday travel and
+            transportation.
+        </p>
+
+        <h2>
+            Big Bikes
+        </h2>
+
+        <p>
+            For motorcycle enthusiasts, we offer big bikes such as
+            the Yamaha YZF-R1, Kawasaki Ninja ZX-10R,
+            Honda CBR1000RR, Suzuki Hayabusa, BMW S1000RR,
+            and Ducati Panigale V4.
+        </p>
+
+        <h2>
+            Our Purpose
+        </h2>
+
+        <p>
+            Our purpose is to provide customers with a convenient
+            way to explore different cars and motorcycles.
+            Customers can view the vehicle descriptions and prices
+            and use the inquiry option to ask for more information
+            about their preferred vehicle.
+        </p>
+
+    </div>
+
+</div>
+
+</div>
+
+</body>
+</html>

@@ -1,0 +1,99 @@
+ <!DOCTYPE html>
+<html>
+<head>
+    <title>Login Website</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+        body {
+            margin: 0;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-image: url("blackjpg.jpg");
+            background-size: cover;
+            background-position: center;
+        }
+        .login-box {
+            width: 350px;
+            padding: 35px;
+            background: rgba(255,255,255,0.15);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            border: 1px solid rgba(255,255,255,0.4);
+            border-radius: 15px;
+            text-align: center;
+            color: white;
+            box-shadow: 0 8px 30px rgba(0,0,0,0.4);
+        }
+        /* Style for your new logo */
+        .login-logo {
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            margin-bottom: 15px;
+            object-fit: cover;
+        }
+        h1 {
+            margin-bottom: 25px;
+            margin-top: 0;
+            font-size: 24px;
+        }
+        input {
+            width: 100%;
+            padding: 13px;
+            margin: 10px 0;
+            background: rgba(255,255,255,0.2);
+            border: 1px solid rgba(255,255,255,0.5);
+            border-radius: 8px;
+            color: white;
+            outline: none;
+        }
+        input::placeholder {
+            color: white;
+        }
+        button {
+            width: 100%;
+            padding: 13px;
+            margin-top: 15px;
+            background: white;
+            color: black;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 16px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    
+	<div class="login-box">
+       
+        <img src="logo.jpg" alt="Logo" class="login-logo" onerror="this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQNF2RTILV6K_MTX7MM8Hcp-v-tQTwUIn04LqCbBQO4BQ&s=10'">
+        
+        <h1>Flores web</h1>
+        <form onsubmit="login(event)">
+            <input type="text" id="username" placeholder="Username" required>
+            <input type="password" id="password" placeholder="Password" required>
+            <button type="submit">Login</button>
+        </form>
+    </div>
+    <script>
+	
+        function login(event) {
+            event.preventDefault();
+            let username = document.getElementById("username").value;
+            let password = document.getElementById("password").value;
+            if (username === "Flores" && password === "12345") {
+                window.location.href = "home.html";
+            } else {
+                alert("Incorrect username or password!");
+            }
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,924 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Janfer Flores - Products</title>
+<link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+<style>
+
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: Arial, sans-serif;
+    }
+
+    body {
+        min-height: 100vh;
+        background: url("prodo.jpg");
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        padding-top: 90px;
+    }
+
+    .navigation {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+        gap: 12px;
+
+        padding: 20px;
+
+        background: rgba(255, 255, 255, 0.95);
+
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+
+        z-index: 1000;
+    }
+
+    .nav-btn {
+        text-decoration: none;
+        background: white;
+        color: #666;
+
+        padding: 12px 25px;
+
+        border-radius: 4px;
+
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.12);
+
+        transition: 0.3s;
+
+        font-weight: bold;
+    }
+
+    .nav-btn:hover,
+    .active {
+        color: #163b7a;
+        transform: translateY(-3px);
+    }
+
+    .nav-btn i {
+        margin-right: 7px;
+    }
+
+    /* LOG OUT BUTTON */
+
+    .nav-btn.logout {
+        color: red;
+    }
+
+    .nav-btn.logout:hover {
+        color: darkred;
+    }
+
+   
+
+    .container {
+        width: 90%;
+        max-width: 1100px;
+
+        margin: 30px auto;
+
+        text-align: center;
+    }
+
+    .card {
+        background: rgba(255, 255, 255, 0.9);
+
+        padding: 40px 30px;
+
+        border-radius: 8px;
+
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.18);
+
+        margin-bottom: 30px;
+    }
+
+    
+
+    h1 {
+        color: #333;
+        margin-bottom: 10px;
+        font-size: 30px;
+    }
+
+    .subtitle {
+        color: #666;
+        margin-bottom: 30px;
+        line-height: 1.6;
+    }
+
+    
+
+    .section-title {
+        color: #163b7a;
+
+        margin: 35px 0 20px;
+
+        font-size: 25px;
+    }
+
+    
+
+    .vehicles {
+        display: grid;
+
+        grid-template-columns: repeat(3, 1fr);
+
+        gap: 25px;
+    }
+
+    .vehicle {
+        background: white;
+
+        border-radius: 8px;
+
+        overflow: hidden;
+
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.12);
+
+        transition: 0.3s;
+    }
+
+    .vehicle:hover {
+        transform: translateY(-7px);
+
+        box-shadow:
+            0 12px 25px rgba(0, 0, 0, 0.20);
+    }
+
+    
+    .vehicle img {
+        width: 100%;
+        height: 190px;
+
+        object-fit: cover;
+
+        display: block;
+    }
+
+    
+
+    .vehicle-info {
+        padding: 20px;
+
+        text-align: left;
+    }
+
+    .vehicle-info h2 {
+        color: #333;
+
+        font-size: 21px;
+
+        margin-bottom: 8px;
+    }
+
+    .category {
+        color: #777;
+
+        font-size: 14px;
+
+        margin-bottom: 12px;
+    }
+
+    .category i {
+        color: #163b7a;
+
+        margin-right: 5px;
+    }
+
+    .description {
+        color: #666;
+
+        font-size: 14px;
+
+        line-height: 1.6;
+
+        margin-bottom: 15px;
+    }
+
+   
+
+    .price {
+        color: #163b7a;
+
+        font-size: 23px;
+
+        font-weight: bold;
+
+        margin-bottom: 15px;
+    }
+
+    
+    .inquire-btn {
+        width: 100%;
+
+        padding: 12px;
+
+        border: none;
+
+        border-radius: 4px;
+
+        background: #163b7a;
+
+        color: white;
+
+        font-weight: bold;
+
+        cursor: pointer;
+
+        transition: 0.3s;
+    }
+
+    .inquire-btn:hover {
+        background: #0d2855;
+
+        transform: translateY(-2px);
+    }
+
+   
+
+    @media(max-width: 850px) {
+
+        .vehicles {
+            grid-template-columns: repeat(2, 1fr);
+        }
+
+    @media(max-width: 600px) {
+
+        body {
+            padding-top: 170px;
+        }
+
+        .navigation {
+            flex-direction: column;
+
+            gap: 8px;
+
+            padding: 12px;
+        }
+
+        .nav-btn {
+            width: 200px;
+
+            text-align: center;
+        }
+
+        .container {
+            width: 92%;
+
+            margin: 20px auto;
+        }
+
+        .card {
+            padding: 30px 15px;
+        }
+
+        h1 {
+            font-size: 25px;
+        }
+
+        .vehicles {
+            grid-template-columns: 1fr;
+        }
+
+        .vehicle {
+            width: 100%;
+        }
+
+    }
+
+</style>
+
+</head>
+
+<body>
+
+<div class="container">
+
+    <div class="product-card">
+
+        <h1>
+            <i class="fa-solid fa-car"></i>
+            Cars & Motorcycles for Sale
+        </h1>
+
+        <p class="subtitle">
+            Browse our available cars, sports cars, motorcycles and big bikes.
+        </p>
+
+
+        
+
+        <h2 class="section-title">
+            <i class="fa-solid fa-car"></i>
+            Regular Cars
+        </h2>
+
+        <div class="vehicles">
+
+           
+            <div class="vehicle">
+                <img src="Toyota Vios.jpg" alt="Toyota Vios">
+
+                <div class="vehicle-info">
+                    <h2>Toyota Vios</h2>
+
+                    <p class="category">
+                        <i class="fa-solid fa-car"></i>
+                        Car • Sedan
+                    </p>
+
+                    <p class="description">
+                        Reliable and fuel-efficient sedan perfect for
+                        everyday driving and family trips.
+                    </p>
+
+                    <p class="price">650,000</p>
+
+                    <button class="inquire-btn"
+                        onclick="inquire('Toyota Vios','?650,000')">
+                        <i class="fa-solid fa-phone"></i>
+                        Inquire Now
+                    </button>
+                </div>
+            </div>
+
+
+           
+            <div class="vehicle">
+                <img src="Honda Civic.jpg" alt="Honda Civic">
+
+                <div class="vehicle-info">
+                    <h2>Honda Civic</h2>
+
+                    <p class="category">
+                        <i class="fa-solid fa-car"></i>
+                        Car • Sedan
+                    </p>
+
+                    <p class="description">
+                        Stylish, comfortable and powerful sedan suitable
+                        for city and highway driving.
+                    </p>
+
+                    <p class="price">950,000</p>
+
+                    <button class="inquire-btn"
+                        onclick="inquire('Honda Civic','?950,000')">
+                        <i class="fa-solid fa-phone"></i>
+                        Inquire Now
+                    </button>
+                </div>
+            </div>
+
+
+            
+            <div class="vehicle">
+                <img src="Mitsubishi Mirage.jpg" alt="Mitsubishi Mirage">
+
+                <div class="vehicle-info">
+                    <h2>Mitsubishi Mirage</h2>
+
+                    <p class="category">
+                        <i class="fa-solid fa-car"></i>
+                        Car • Hatchback
+                    </p>
+
+                    <p class="description">
+                        Compact and economical car suitable for daily
+                        transportation.
+                    </p>
+
+                    <p class="price">580,000</p>
+
+                    <button class="inquire-btn"
+                        onclick="inquire('Mitsubishi Mirage','?580,000')">
+                        <i class="fa-solid fa-phone"></i>
+                        Inquire Now
+                    </button>
+                </div>
+            </div>
+
+        </div>
+
+
+       
+        <h2 class="section-title">
+            <i class="fa-solid fa-car-side"></i>
+            Sports Cars
+        </h2>
+
+        <div class="vehicles">
+
+           
+            <div class="vehicle">
+                <img src="toyota.jpg" alt="Toyota GR Supra">
+
+                <div class="vehicle-info">
+                    <h2>Toyota GR Supra</h2>
+
+                    <p class="category">
+                        <i class="fa-solid fa-car-side"></i>
+                        Sports Car • Coupe
+                    </p>
+
+                    <p class="description">
+                        High-performance sports coupe with a powerful
+                        engine and aggressive styling.
+                    </p>
+
+                    <p class="price">5,600,000</p>
+
+                    <button class="inquire-btn"
+                        onclick="inquire('Toyota GR Supra','?5,600,000')">
+                        <i class="fa-solid fa-phone"></i>
+                        Inquire Now
+                    </button>
+                </div>
+            </div>
+
+
+           
+            <div class="vehicle">
+                <img src="Nissan GTR.jpg" alt="Nissan GT-R">
+
+                <div class="vehicle-info">
+                    <h2>Nissan GT-R</h2>
+
+                    <p class="category">
+                        <i class="fa-solid fa-car-side"></i>
+                        Sports Car • Coupe
+                    </p>
+
+                    <p class="description">
+                        Legendary performance car known for its
+                        speed, power and advanced technology.
+                    </p>
+
+                    <p class="price">7,800,000</p>
+
+                    <button class="inquire-btn"
+                        onclick="inquire('Nissan GT-R','?7,800,000')">
+                        <i class="fa-solid fa-phone"></i>
+                        Inquire Now
+                    </button>
+                </div>
+            </div>
+
+
+          
+            <div class="vehicle">
+                <img src="Ford Mustang.jpg" alt="Ford Mustang">
+
+                <div class="vehicle-info">
+                    <h2>Ford Mustang</h2>
+
+                    <p class="category">
+                        <i class="fa-solid fa-car-side"></i>
+                        Sports Car • Muscle Car
+                    </p>
+
+                    <p class="description">
+                        Iconic muscle car combining bold design,
+                        strong performance and modern technology.
+                    </p>
+
+                    <p class="price">4,200,000</p>
+
+                    <button class="inquire-btn"
+                        onclick="inquire('Ford Mustang','?4,200,000')">
+                        <i class="fa-solid fa-phone"></i>
+                        Inquire Now
+                    </button>
+                </div>
+            </div>
+
+
+           
+            <div class="vehicle">
+                <img src="Chevrolet Corvette.jpg" alt="Chevrolet Corvette">
+
+                <div class="vehicle-info">
+                    <h2>Chevrolet Corvette</h2>
+
+                    <p class="category">
+                        <i class="fa-solid fa-car-side"></i>
+                        Sports Car • Coupe
+                    </p>
+
+                    <p class="description">
+                        Modern performance sports car featuring
+                        striking styling and excellent handling.
+                    </p>
+
+                    <p class="price">6,500,000</p>
+
+                    <button class="inquire-btn"
+                        onclick="inquire('Chevrolet Corvette','?6,500,000')">
+                        <i class="fa-solid fa-phone"></i>
+                        Inquire Now
+                    </button>
+                </div>
+            </div>
+
+
+            
+            <div class="vehicle">
+                <img src="Porsche 911.jpg" alt="Porsche 911">
+
+                <div class="vehicle-info">
+                    <h2>Porsche 911</h2>
+
+                    <p class="category">
+                        <i class="fa-solid fa-car-side"></i>
+                        Sports Car • Coupe
+                    </p>
+
+                    <p class="description">
+                        Premium sports car offering refined design,
+                        impressive performance and comfort.
+                    </p>
+
+                    <p class="price">9,800,000</p>
+
+                    <button class="inquire-btn"
+                        onclick="inquire('Porsche 911','?9,800,000')">
+                        <i class="fa-solid fa-phone"></i>
+                        Inquire Now
+                    </button>
+                </div>
+            </div>
+
+
+            
+            <div class="vehicle">
+                <img src="huh.jpg" alt="Chevrolet Camaro">
+
+                <div class="vehicle-info">
+                    <h2>Chevrolet Camaro</h2>
+
+                    <p class="category">
+                        <i class="fa-solid fa-car-side"></i>
+                        Sports Car • Muscle Car
+                    </p>
+
+                    <p class="description">
+                        Powerful muscle car with sporty styling
+                        and exciting road performance.
+                    </p>
+
+                    <p class="price">4,500,000</p>
+
+                    <button class="inquire-btn"
+                        onclick="inquire('Chevrolet Camaro','?4,500,000')">
+                        <i class="fa-solid fa-phone"></i>
+                        Inquire Now
+                    </button>
+                </div>
+            </div>
+
+        </div>
+
+
+
+        <h2 class="section-title">
+            <i class="fa-solid fa-motorcycle"></i>
+            Scooters
+        </h2>
+
+        <div class="vehicles">
+
+            
+            <div class="vehicle">
+                <img src="Honda Click 125i.jpg" alt="Honda Click 125i">
+
+                <div class="vehicle-info">
+                    <h2>Honda Click 125i</h2>
+
+                    <p class="category">
+                        <i class="fa-solid fa-motorcycle"></i>
+                        Motorcycle • Scooter
+                    </p>
+
+                    <p class="description">
+                        Practical and fuel-efficient motorcycle
+                        perfect for everyday transportation.
+                    </p>
+
+                    <p class="price">82,000</p>
+
+                    <button class="inquire-btn"
+                        onclick="inquire('Honda Click 125i','?82,000')">
+                        <i class="fa-solid fa-phone"></i>
+                        Inquire Now
+                    </button>
+                </div>
+            </div>
+
+
+           
+            <div class="vehicle">
+                <img src="Yamaha NMAX.jpg" alt="Yamaha NMAX">
+
+                <div class="vehicle-info">
+                    <h2>Yamaha NMAX</h2>
+
+                    <p class="category">
+                        <i class="fa-solid fa-motorcycle"></i>
+                        Motorcycle • Scooter
+                    </p>
+
+                    <p class="description">
+                        Comfortable and stylish scooter with excellent
+                        performance for everyday riding.
+                    </p>
+
+                    <p class="price">155,000</p>
+
+                    <button class="inquire-btn"
+                        onclick="inquire('Yamaha NMAX','?155,000')">
+                        <i class="fa-solid fa-phone"></i>
+                        Inquire Now
+                    </button>
+                </div>
+            </div>
+
+
+            
+            <div class="vehicle">
+                <img src="Yamaha Mio.jpg" alt="Yamaha Mio">
+
+                <div class="vehicle-info">
+                    <h2>Yamaha Mio</h2>
+
+                    <p class="category">
+                        <i class="fa-solid fa-motorcycle"></i>
+                        Motorcycle • Scooter
+                    </p>
+
+                    <p class="description">
+                        Affordable and easy-to-use motorcycle
+                        for everyday travel.
+                    </p>
+
+                    <p class="price">78,000</p>
+
+                    <button class="inquire-btn"
+                        onclick="inquire('Yamaha Mio','?78,000')">
+                        <i class="fa-solid fa-phone"></i>
+                        Inquire Now
+                    </button>
+                </div>
+            </div>
+
+        </div>
+
+
+        
+        <h2 class="section-title">
+            <i class="fa-solid fa-motorcycle"></i>
+            Big Bikes
+        </h2>
+
+        <div class="vehicles">
+
+            
+            <div class="vehicle">
+                <img src="Yamaha R1.jpg" alt="Yamaha YZF-R1">
+
+                <div class="vehicle-info">
+                    <h2>Yamaha YZF-R1</h2>
+
+                    <p class="category">
+                        <i class="fa-solid fa-motorcycle"></i>
+                        Big Bike • Superbike
+                    </p>
+
+                    <p class="description">
+                        High-performance superbike with aggressive
+                        styling and powerful performance.
+                    </p>
+
+                    <p class="price">1,450,000</p>
+
+                    <button class="inquire-btn"
+                        onclick="inquire('Yamaha YZF-R1','?1,450,000')">
+                        <i class="fa-solid fa-phone"></i>
+                        Inquire Now
+                    </button>
+                </div>
+            </div>
+
+
+           
+            <div class="vehicle">
+                <img src="Kawasaki Ninja ZX10R.jpg" alt="Kawasaki Ninja ZX-10R">
+
+                <div class="vehicle-info">
+                    <h2>Kawasaki Ninja ZX-10R</h2>
+
+                    <p class="category">
+                        <i class="fa-solid fa-motorcycle"></i>
+                        Big Bike • Superbike
+                    </p>
+
+                    <p class="description">
+                        Powerful sport motorcycle designed for
+                        performance and exciting riding.
+                    </p>
+
+                    <p class="price">1,600,000</p>
+
+                    <button class="inquire-btn"
+                        onclick="inquire('Kawasaki Ninja ZX-10R','?1,600,000')">
+                        <i class="fa-solid fa-phone"></i>
+                        Inquire Now
+                    </button>
+                </div>
+            </div>
+
+
+           
+            <div class="vehicle">
+                <img src="Honda CBR1000RR.jpg" alt="Honda CBR1000RR">
+
+                <div class="vehicle-info">
+                    <h2>Honda CBR1000RR</h2>
+
+                    <p class="category">
+                        <i class="fa-solid fa-motorcycle"></i>
+                        Big Bike • Superbike
+                    </p>
+
+                    <p class="description">
+                        Sport-focused motorcycle with strong
+                        acceleration and modern styling.
+                    </p>
+
+                    <p class="price">1,550,000</p>
+
+                    <button class="inquire-btn"
+                        onclick="inquire('Honda CBR1000RR','?1,550,000')">
+                        <i class="fa-solid fa-phone"></i>
+                        Inquire Now
+                    </button>
+                </div>
+            </div>
+
+
+            
+            <div class="vehicle">
+                <img src="Suzuki Hayabusa.jpg" alt="Suzuki Hayabusa">
+
+                <div class="vehicle-info">
+                    <h2>Suzuki Hayabusa</h2>
+
+                    <p class="category">
+                        <i class="fa-solid fa-motorcycle"></i>
+                        Big Bike • Sport Bike
+                    </p>
+
+                    <p class="description">
+                        Legendary sport motorcycle known for its
+                        distinctive design and powerful performance.
+                    </p>
+
+                    <p class="price">1,400,000</p>
+
+                    <button class="inquire-btn"
+                        onclick="inquire('Suzuki Hayabusa','?1,400,000')">
+                        <i class="fa-solid fa-phone"></i>
+                        Inquire Now
+                    </button>
+                </div>
+            </div>
+
+
+            
+            <div class="vehicle">
+                <img src="BMW S1000RR.jpg" alt="BMW S1000RR">
+
+                <div class="vehicle-info">
+                    <h2>BMW S1000RR</h2>
+
+                    <p class="category">
+                        <i class="fa-solid fa-motorcycle"></i>
+                        Big Bike • Superbike
+                    </p>
+
+                    <p class="description">
+                        Premium superbike featuring modern technology,
+                        sporty design and impressive performance.
+                    </p>
+
+                    <p class="price">1,850,000</p>
+
+                    <button class="inquire-btn"
+                        onclick="inquire('BMW S1000RR','?1,850,000')">
+                        <i class="fa-solid fa-phone"></i>
+                        Inquire Now
+                    </button>
+                </div>
+            </div>
+
+
+            
+            <div class="vehicle">
+                <img src="Ducati Panigale V4.jpg" alt="Ducati Panigale V4">
+
+                <div class="vehicle-info">
+                    <h2>Ducati Panigale V4</h2>
+
+                    <p class="category">
+                        <i class="fa-solid fa-motorcycle"></i>
+                        Big Bike • Superbike
+                    </p>
+
+                    <p class="description">
+                        Italian superbike combining aggressive styling,
+                        advanced engineering and strong performance.
+                    </p>
+
+                    <p class="price">2,300,000</p>
+
+                    <button class="inquire-btn"
+                        onclick="inquire('Ducati Panigale V4','?2,300,000')">
+                        <i class="fa-solid fa-phone"></i>
+                        Inquire Now
+                    </button>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <div class="navigation">
+
+        <a href="Home.html" class="nav-btn">
+            <i class="fa-solid fa-house"></i>
+            Home
+        </a>
+
+        <a href="About.html" class="nav-btn">
+            <i class="fa-solid fa-circle-info"></i>
+            About
+        </a>
+
+        <a href="Product.html" class="nav-btn active">
+            <i class="fa-solid fa-car"></i>
+            Product
+        </a>
+
+        <a href="Contact.html" class="nav-btn">
+            <i class="fa-solid fa-envelope"></i>
+            Contact
+        </a>
+
+        <a href="log in form.html"
+           class="nav-btn logout"
+           onclick="return confirm('Are you sure you want to log out?');">
+
+            <i class="fa-solid fa-right-from-bracket"></i>
+            Log Out
+
+        </a>
+
+    </div>
+
+</div>
+
+
+<script>
+
+function inquire(vehicle, price) {
+
+    alert(
+        "Vehicle: " +
+        vehicle +
+        "\nPrice: " +
+        price +
+        "\n\nPlease contact Janfer Flores for more information."
+    );
+
+}
+
+</script>
+
+</body>
+</html>
